@@ -1,0 +1,29 @@
+﻿@model ChildrenHelper.Models.Diagnoz
+@{
+    ViewBag.Title = "Edit";
+
+}
+
+<h2>Изменение пользователя</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Болезнь</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <p>
+            Название болезни <br />
+            @Html.EditorFor(model => model.Name)
+        </p>
+
+
+        <p>
+            <input type="submit" value="Сохранить" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Вернуться к списку пользователей", "Index")
+</div>

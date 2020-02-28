@@ -1,0 +1,39 @@
+﻿@using ChildrenHelper.Models
+
+
+@using Microsoft.AspNetCore.Mvc.Internal
+
+@model ChildrenHelper.Services.Contracts.Models.ChildrenModel;
+@{
+    Layout = null;
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>Imya</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Chname)
+        </dd>
+
+        <dt>Familiya</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Chsurname)
+        </dd>
+
+        <dt>Otchestvo</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Chsecname)
+        </dd>
+        
+
+    </dl>
+
+    <div>
+        <form asp-controller="Children" asp-action="Delete" method="post">
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</div>
+

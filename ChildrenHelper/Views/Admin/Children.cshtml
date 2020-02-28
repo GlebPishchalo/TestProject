@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ChildrenHelper.Models.Children>
+@{
+    ViewBag.Title = "Список детей";
+}
+
+<h2>Список детей</h2>
+<p>
+    @Html.ActionLink("Добавить ребенка", "Create")
+</p>
+<table>
+    <tr>
+        <th>Имя ребенка</th>
+        <th>Фамилия</th>
+        <th>Отчество</th>
+        <th>Описание</th>
+        <th>Болезнь</th>
+        <th>Сумма</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chsurname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chsecname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chdesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diagnoz.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Summa)
+            </td>
+            <td>
+                @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+<p>
+
+</p>

@@ -1,0 +1,48 @@
+﻿@model ChildrenHelper.Models.Children
+@{
+    ViewBag.Title = "Edit";
+   
+}
+
+<h2>Изменение ребенка</h2>
+
+@using (Html.BeginForm())
+{
+<fieldset>
+    <legend>Ребенок</legend>
+
+    @Html.HiddenFor(model => model.Id)
+
+    <p>
+        Имя ребенка <br />
+        @Html.EditorFor(model => model.Chname)
+    </p>
+    <p>
+        Фамилия ребенка <br />
+        @Html.EditorFor(model => model.Chsurname)
+    </p>
+    <p>
+        Отчество ребенка <br />
+        @Html.EditorFor(model => model.Chsecname)
+    </p>
+    <p>
+        Описание <br />
+        @Html.EditorFor(model => model.Chdesc)
+    </p>
+    <p>
+        Summa ребенка <br />
+        @Html.EditorFor(model => model.Summa)
+    </p>
+    <p>
+        Summa ребенка <br />
+        @Html.DropDownListFor(model => model.DiagnozID, ViewBag.Diagnozes as SelectList)
+    </p>
+
+    <p>
+        <input type="submit" value="Сохранить" />
+    </p>
+</fieldset>
+}
+<div>
+    @Html.ActionLink("Вернуться к списку детей", "Index")
+</div>

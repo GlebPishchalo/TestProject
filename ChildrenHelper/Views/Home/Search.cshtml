@@ -1,0 +1,23 @@
+﻿@model ChildrenHelper.DataBase.IndexViewModel
+<div >
+    <h3>Search result</h3>
+    @if (Model.Childrens.Any())
+    {
+        <table class="table table-hover" id="latestFoodsTable">
+            <tbody>
+                @foreach (var children in Model.Childrens)
+                {
+                    <tr>
+                        <td>
+                            @Html.PartialAsync("ChildrenSummary", children)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h4>Not result</h4>
+    }
+</div>

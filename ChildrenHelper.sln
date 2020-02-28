@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChildrenHelper", "ChildrenHelper\ChildrenHelper.csproj", "{2A48164F-A1A5-40E8-A280-559274311590}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChildrenHelper.Services", "ChildrenHelper.Services\ChildrenHelper.Services.csproj", "{BC184587-4CDE-4BA3-924C-AF1C36C16302}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChildrenHelper.Services.Contracts", "ChildrenHelper.Services.Contracts\ChildrenHelper.Services.Contracts.csproj", "{58CDB2C3-5600-4620-BDEC-A79A4C75D5AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5646E543-5C89-4F1F-8F85-DE9C26DA4220}"
+	ProjectSection(SolutionItems) = preProject
+		ChildrenHelper.Services.Contracts\Interfaces\IUserService.cs = ChildrenHelper.Services.Contracts\Interfaces\IUserService.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildrenHelper.DataBase", "ChildrenHelper.DataBase\ChildrenHelper.DataBase.csproj", "{3A2C40E9-76E0-4493-84B4-9892C1A950C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A48164F-A1A5-40E8-A280-559274311590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A48164F-A1A5-40E8-A280-559274311590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A48164F-A1A5-40E8-A280-559274311590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A48164F-A1A5-40E8-A280-559274311590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC184587-4CDE-4BA3-924C-AF1C36C16302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC184587-4CDE-4BA3-924C-AF1C36C16302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC184587-4CDE-4BA3-924C-AF1C36C16302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC184587-4CDE-4BA3-924C-AF1C36C16302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58CDB2C3-5600-4620-BDEC-A79A4C75D5AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58CDB2C3-5600-4620-BDEC-A79A4C75D5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58CDB2C3-5600-4620-BDEC-A79A4C75D5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58CDB2C3-5600-4620-BDEC-A79A4C75D5AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A2C40E9-76E0-4493-84B4-9892C1A950C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A2C40E9-76E0-4493-84B4-9892C1A950C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A2C40E9-76E0-4493-84B4-9892C1A950C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A2C40E9-76E0-4493-84B4-9892C1A950C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFCAFA83-0D44-41E9-B30D-9DA0C490F3FF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,126 @@
+﻿@using Microsoft.Extensions.Configuration
+@model ChildrenHelper.Services.Contracts.Models.LoginUserModel
+
+
+<html>
+<head>
+    <style>
+            div {
+                text-align: center;
+                margin-bottom: -7px; /* Отступ снизу */
+                padding: 10px; /* Поля вокруг текста */
+            }
+
+            a {
+                text-align: center;
+            }
+
+.top-menu {
+  position: relative;
+  background: rgb(204,204,179);
+}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.left-item {float: left;}
+.right-item {float: right;}
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  line-height: 80px;
+  padding: 0 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: white;
+  transition: .3s linear;
+}
+.menu-main a:hover {background: rgba(0,0,0,.3);}
+
+.menu-main {
+  padding-top: 90px;
+  text-align: center;
+}
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+.menu-main li {
+  float: none;
+  display: inline-block;
+}
+.menu-main a {
+  line-height: normal;
+  padding: 20px 15px;
+  font-size: 16px;
+}
+}
+
+    </style>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="top-menu">
+        <ul class="menu-main">
+            <li class="left-item"><a href=""></a></li>
+            <li class="left-item"><a href=""></a></li>
+            <li class="left-item"><a href=""></a></li>
+            <li class="right-item"><a href="">Login</a></li>
+            <li class="right-item"><a href=""></a></li>
+            <li class="right-item"><a href=""></a></li>
+        </ul>
+        <a class="navbar-logo" href=""><img src="https://sun9-52.userapi.com/c857720/v857720918/124396/A0iZq7WG10g.jpg"></a>
+    </nav>
+
+    <form asp-action="Login" asp-controller="Account" asp-antiforgery="true">
+        <div class="validation" asp-validation-summary="ModelOnly" />
+        <div>
+            <div class="form-group">
+                <label asp-for="Email">Введитe  email</label>
+                <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" class="form-control" type="text" asp-for="Email" />
+                <span asp-validation-for="Email" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">Введите пароль</label>
+                <input placeholder="Enter password" asp-for="Password" />
+                <span asp-validation-for="Password" />
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Войти" />
+            </div>
+        </div>
+    </form>
+    <div><a asp-action="Register" asp-controller="Account">У меня нет аккаунта(</a></div>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>

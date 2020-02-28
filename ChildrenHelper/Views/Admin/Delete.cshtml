@@ -1,0 +1,46 @@
+﻿@model ChildrenHelper.Models.Children
+@{
+    ViewBag.Title = "Delete";
+
+}
+
+<h2>Удаление</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Ребенок</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <p>
+            Имя ребенка <br />
+            @Html.DisplayFor(model => model.Chname)
+        </p>
+        <p>
+            Фамилия ребенка <br />
+            @Html.DisplayFor(model => model.Chsurname)
+        </p>
+        <p>
+            Отчество ребенка <br />
+            @Html.DisplayFor(model => model.Chsecname)
+        </p>
+        <p>
+            Описание <br />
+            @Html.DisplayFor(model => model.Chdesc)
+        </p>
+        <p>
+            Summa ребенка <br />
+            @Html.DisplayFor(model => model.Summa)
+        </p>
+       
+
+        <p>
+            <input type="submit" value="Удалить" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Вернуться к списку детей", "Index")
+</div>
+

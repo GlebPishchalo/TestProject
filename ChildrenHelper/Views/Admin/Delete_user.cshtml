@@ -1,0 +1,40 @@
+﻿@model ChildrenHelper.DataBase.User
+@{
+    ViewBag.Title = "Delete";
+
+}
+
+<h2>Удаление пользователя</h2>
+
+@using (Html.BeginForm())
+{
+<fieldset>
+    <legend>Пользователь</legend>
+    @Html.HiddenFor(model => model.Id)
+    <p>
+        Email пользователя <br />
+        @Html.DisplayFor(model => model.Email)
+    </p>
+    <p>
+        Никнейм <br />
+        @Html.DisplayFor(model => model.Username)
+    </p>
+    <p>
+        Фамилия пользователя <br />
+        @Html.DisplayFor(model => model.Surname)
+    </p>
+    <p>
+        Имя пользователя <br />
+        @Html.DisplayFor(model => model.Name)
+    </p>
+    <p>
+        Отчество пользователя <br />
+        @Html.DisplayFor(model => model.SecName)
+    </p>
+
+
+    <p>
+        <input type="submit" value="Удаление" />
+    </p>
+</fieldset>
+}

@@ -1,0 +1,55 @@
+﻿
+@model ChildrenHelper.DataBase.User
+@{
+    ViewBag.Title = "Edit";
+
+}
+
+<h2>Изменение пользователя</h2>
+
+@using (Html.BeginForm())
+{
+<fieldset>
+    <legend>Пользователь</legend>
+
+    @Html.HiddenFor(model => model.Id)
+
+    <p>
+        Email пользователя <br />
+        @Html.EditorFor(model => model.Email)
+    </p>
+    <p>
+        Никнейм <br />
+        @Html.EditorFor(model => model.Username)
+    </p>
+    <p>
+        Фамилия пользователя <br />
+        @Html.EditorFor(model => model.Surname)
+    </p>
+    <p>
+        Имя пользователя <br />
+        @Html.EditorFor(model => model.Name)
+    </p>
+    <p>
+        Отчество пользователя <br />
+        @Html.EditorFor(model => model.SecName)
+    </p>
+    <p>
+        Password <br />
+        @Html.EditorFor(model => model.Password)
+    </p>
+
+    <p>
+        Роль <br />
+        @Html.DropDownListFor(model => model.RoleId, ViewBag.Roles as SelectList)
+    </p>
+
+    <p>
+        <input type="submit" value="Сохранить" />
+    </p>
+</fieldset>
+}
+<div>
+    @Html.ActionLink("Вернуться к списку пользователей", "Index")
+</div>
+
